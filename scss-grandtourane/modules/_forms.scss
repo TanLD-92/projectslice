@@ -1,0 +1,164 @@
+
+/****************** form *******************/
+.bs-container.bootstrap-select.open {
+	position: absolute;
+	&.select-setheight {
+		.dropdown-menu.open {
+			ul {
+				max-height: 134px !important;
+				overflow-y:  auto !important;
+			}
+		}
+	}
+}
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+	&.select-custome {
+		width: 100%;
+		.dropdown-toggle {
+			border: 0 none transparent;
+			font-size: 15px;
+			font-family: $font-family-text;
+			outline: 0 none transparent;
+
+			&:hover, &:focus {
+				background-color: transparent;
+				@include box-shadow(none);
+				outline: 0 none transparent;
+			}
+		}
+		.dropdown-menu {
+			left: auto;
+			right: 0;
+			z-index: 1050;
+		}
+		&.select-auto {
+			width: auto;
+		}
+		&.open {
+			.dropdown-toggle {
+				background-color: transparent;
+				@include box-shadow(none);
+				outline: 0 none transparent;
+
+				&:hover, &:focus {
+					outline: 0 none transparent;
+				}
+			}
+		}
+	}
+}
+.main-form {
+	.form-select-ov {
+		overflow: hidden;
+	}
+}
+.search-header-form {
+	.form-control {
+		background-color: transparent;
+		border: 0 none transparent;
+		@include border-radius(0);
+		@include box-shadow(none);
+		color: #8D8D8D;
+
+		font-size: 21px;
+		font-family: $font-family-text;
+
+		height: 76px;
+		padding:22px 20px;
+		&:focus {
+			border: 0 none transparent;
+			@include box-shadow(none);
+			color: $color-white;
+		}
+	}
+	.form-group {
+		margin-bottom: 0;
+		.btn-group {
+			width: 100% !important;
+		}
+	}
+}
+.booking-form {
+	position: relative;
+	width: 100%;
+
+	.form-group-submit {
+		height: 50px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		bottom: 0;
+		left: 0;
+		position: absolute;
+	}
+	.select-custome {
+		.dropdown-menu.open {
+			max-height: 132px !important;
+			overflow-y: auto !important;
+		}
+	}
+	.form-froup-content {
+		padding: 8px 25px 50px;
+		position: relative;
+	    height: 100%;
+	    overflow-y: auto;
+	    button.Zebra_DatePicker_Icon {
+	    	top: 50% !important;
+	    	margin-top: -8px;
+            right: -10px !important;
+	    }
+		.control-label {
+			color: $color-black;
+
+			@include rem('font-size', 14);
+			@include rem('line-height', 32);
+			// line-height: 32px;
+			font-weight: $font-semibold;
+			font-family: $font-family-text;
+			text-transform: uppercase;
+			text-align: left;
+
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 4px;
+		}
+        .control-input {
+            padding: 0;
+        }
+		.form-control {
+			background-color: transparent;
+			border: 0 none transparent;
+			color: $color-black;
+			@include box-shadow(none);
+			&:focus {
+				border: 0 none transparent;
+			}
+		}
+		.form-datepicker ,.form-ct-col {
+			padding-top: 3px;
+		}
+		.form-ct-col,.form-datepicker {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.form-datepicker {
+			.form-control {
+				float:left;
+				width: 100px;
+			}
+		}
+		.form-group {
+			border-bottom: 1px solid $color-border-form;
+			margin: 0;
+			padding: 14px 0 2px;
+		}
+	}
+}
+.form-group {
+	margin-bottom: 0;
+	.btn-group {
+		width: 100% !important;
+	}
+}
+/****************** form .end *************/

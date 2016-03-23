@@ -1,0 +1,87 @@
+.list-media-content {
+  margin: 0;
+  list-style-type: none;
+  li {
+    padding: 0;
+  }
+  .item-media-content {
+    .have-more {
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.2);
+        z-index: 1;
+        top: 0;
+        left: 0;
+        position: absolute;
+        @include transition(all 0.2s ease-in-out);
+      }
+      &:hover, &:active, &:focus {
+        &:before {
+            background-color: rgba(0,0,0,0.4);
+        }
+        .icon-over {
+          @include rem('font-size', 50);
+        }
+      }
+    }
+    .item-thumb {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      min-height: 192px;
+      position: relative;
+      overflow: hidden;
+      // @include filter-brightness(1);
+      // &:hover {
+      //   .image-thum {
+      //     @include scale(1.1);
+      //   }
+      // }
+      .image-thum {
+        display: block;
+        width: 100%;
+        min-height: 192px;
+        height: auto;
+        @include transition(all 0.8s ease-in-out);
+      }
+      .icon-over {
+        position: absolute;
+        @include center-align-absolute();
+        @include rem('font-size', 33);
+        color: $color-white;
+        z-index: 2;
+        @include transition(all 0.2s ease-in-out);
+      }
+      .btn-play-video {
+        display: block;
+        position: absolute;
+        padding: 2px;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 15px;
+            left: 15px;
+            z-index: 1;
+            width: 23px;
+            height: 23px;
+            background-color: $color-white;
+        }
+        @include center-align-absolute();
+        cursor: pointer;
+        /*background-color: $color-white;*/
+        @include border-radius(50px);
+        color: $color-brown-light;
+        &:hover,&:active, &:focus {
+          color: $color-brown-weight;
+        }
+        .icon {
+          @include rem('font-size', 45);
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

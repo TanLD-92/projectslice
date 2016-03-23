@@ -1,0 +1,64 @@
+.title-block-result {
+  margin-top: 46px;
+  padding: 20px;
+  @include rem('font-size', 32);
+  @include rem('line-height', 38);
+  color: $color-default-2;
+  .labe-block-result {
+    // text-transform: capitalize;
+  }
+  .token-search {
+    text-transform: capitalize;
+  }
+}
+
+.b-list-result-content {
+  padding: 0px 20px;
+  list-style-type: none;
+  .item-result {
+    margin-bottom: 10px;
+    @include transition(box-shadow .5s ease);
+    &:hover,&:active, &:focus {
+      @include box-shadow(0 1px 5px rgba(129,129,129,.5));
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .item-link-result {
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      @include flexbox();
+      @include align-items(top);
+      .image-item-result {
+        width: 259px;
+        height: 153px;
+      }
+      .item-result-desc-content {
+        @include flex(1);
+        // min-height: 153px;
+        margin-left: 10px;
+        // padding: 0px 10px;
+        .item-result-title {
+          @include rem('font-size', 25);
+          @include rem('line-height', 28);
+          color: $color-grey-link;
+          margin-bottom: 10px;
+        }
+        .item-info-title {
+          @include rem('font-size', 14);
+          @include rem('line-height', 22);
+          color: $color-desc-detail;
+          margin-bottom: 10px;
+        }
+        .item-info-desc {
+          @include rem('font-size', 14);
+          @include rem('line-height', 22);
+          color: $color-desc-detail;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

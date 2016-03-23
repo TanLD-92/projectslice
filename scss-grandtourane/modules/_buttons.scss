@@ -1,0 +1,205 @@
+/*********** button ***************/
+	.btn-brown-46 ,a.btn-brown-46 {
+    	@include transition(all 0.5s ease-in-out);
+		background-color: $color-brown-light;
+		border: 0 none transparent;
+		color: $color-white;
+		display: inline-block;
+		font-size: 15px;
+		font-weight: $font-normal;
+		height: 46px;
+		letter-spacing: 3px;
+		line-height: 25px;
+		padding: 10px 22px;
+		text-transform: uppercase;
+		vertical-align: top;
+		.left-icon {
+			display: inline-block;
+			height: 24px;
+			font-size: 18px;
+			margin-right: 14px;
+			vertical-align: top;
+			width: 28px;
+			.grandicons {
+				display: inline-block;
+				height: 100%;
+				width: 100%;
+				position: relative;
+				font-family: 'icomoon' !important;
+				@include transition (all .3s ease);
+
+				&:before {
+					content: "\e904";
+					@include transition (all .3s ease);
+					position: absolute;
+					left: 0;
+					top: 0;
+					font-size: 18px;
+				}
+				&:after {
+					background-color: transparent;
+					@include border-radius(1px);
+					content: '';
+					display: inline-block;
+					height: 3px;
+					left: 0;
+					@include transition (all .3s ease);
+					position: absolute;
+					-webkit-transform-origin: 0.28571rem center;
+					transform-origin: 0.28571rem center;
+					width: 16px;
+				}
+			}
+		}
+		&.open {
+			.left-icon .grandicons{
+				&:before ,&:after {
+					content: " ";
+					font-size: 0;
+					display: inline-block;
+					position: absolute;
+					height: 2px;
+					width: 22px;
+					top: 50%;
+					margin-top: -2px;
+					left: 50%;
+					margin-left: -11px;
+					background: $color-white;
+					@include opacity(1);
+					-webkit-transform-origin: 0.28571rem center;
+					transform-origin: 0.28571rem center;
+					-webkit-transform-origin: 50% 50%;
+					transform-origin: 50% 50%;
+				}
+				&:before {
+				  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+				  transform: rotate3d(0, 0, 1, 45deg);
+				}
+				&:after {
+				  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+				  transform: rotate3d(0, 0, 1, -45deg);
+				}
+			}
+		}
+		&:hover, &:focus {
+			outline: 0 none transparent;
+			background-color: darken($color-brown-light,18%);
+			color: $color-white;
+			text-decoration: none;
+		}
+	}
+	.btn-brown-full, a.btn-brown-full {
+		@include transition(all 0.5s ease-in-out);
+		@include border-radius(0);
+		background-color: $color-brown-light;
+		border: 0 none transparent;
+		color: $color-white;
+		display: inline-block;
+		font-size: 15px;
+		font-weight: $font-normal;
+		height: 50px;
+		letter-spacing: 3px;
+		line-height: 25px;
+		padding: 10px 22px;
+		text-transform: uppercase;
+		vertical-align: top;
+		width: 100%;
+		&:hover, &:focus {
+			outline: 0 none transparent;
+			background-color: darken($color-brown-light,18%);
+			color: $color-white;
+			text-decoration: none;
+		}
+	}
+	.btn-search-header {
+		 display: inline-block;
+		 position: relative;
+		&::before, &::after {
+			/* search icon */
+			content: '';
+			position: absolute;
+			@include transition(opacity .3s);
+			/* Force Hardware Acceleration in WebKit */
+			@include transform(translateZ(0));
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		&::before {
+			/* lens */
+			@include border-radius(50%);
+			height: 13px;
+			left: 18px;
+			top: 13px;
+			width: 13px;
+			border: 3px solid $color-white;
+		}
+
+		&::after {
+			/* handle */
+			height: 3px;
+			width: 8px;
+			background: $color-white;;
+			top: 24px;
+			left: 26px;
+			@include transform(rotate(45deg));
+		}
+
+		.iconchange {
+			/* container for the X icon */
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.iconchange::before, .iconchange::after {
+			/* close icon */
+			content: '';
+			position: absolute;
+			display: inline-block;
+			height: 2px;
+			width: 22px;
+			top: 50%;
+			margin-top: -2px;
+			left: 50%;
+			margin-left: -11px;
+			background: $color-white;
+			opacity: 0;
+			/* Force Hardware Acceleration in WebKit */
+			@include transform(translateZ(0));
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			@include transition(opacity .3s, transform .3s);
+		}
+
+		.iconchange::before {
+			@include transform(rotate(45deg));
+		}
+
+		.iconchange::after {
+			@include transform(rotate(-45deg));
+		}
+
+		&.open {
+			&::before, &::after {
+				/* hide search icon */
+				opacity: 0;
+			}
+
+			.iconchange::before, .iconchange::after {
+				/* show close icon */
+				opacity: 1;
+			}
+
+			.iconchange::before {
+				@include transform(rotate(135deg));
+			}
+
+			.iconchange::after {
+				@include transform(rotate(45deg));
+			}
+		}
+	}
+/*********** button .end ***************/

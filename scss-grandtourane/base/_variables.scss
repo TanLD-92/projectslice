@@ -1,0 +1,89 @@
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Webfonts
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Font Google API
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,vietnamese);
+
+
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// |
+// | Variables
+// |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Path
+$image-url: "../images" !default;
+$font-url: "../fonts" !default;
+
+// Width & Height
+$width-container: 970px !default;
+$height-footer: 150px !default;
+
+// Color
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-primary: #00aff0 !default;
+$color-secondary: #8cc43d !default;
+$color-link: #046cae !default;
+$color-hover-link: #000 !default;
+$color-text: #222 !default;
+$color-warning: #d4230f !default;
+$color-error: #f00 !default;
+$color-default : #333;
+$color-brown: #9e8b4f !default;
+$color-brown-light: #c0a54e !default;
+$color-brown-02: #c1a753 !default;
+$color-grey-link: #5b5758 !default;
+$color-border: #dadada !default;
+$color-border-form: #efefef !default;
+$color-desc-item: #9b9b9b !default;
+$color-title-dark: #6b6768 !default;
+$color-grey-link-2: #c6c6c6 !default;
+$color-title-detail: #5b5758 !default;
+$color-desc-detail: #999999 !default;
+$color-unit: #a9a9a9 !default;
+$color-default-2: #333333 !default;
+$color-border: #979797 !default;
+$color-google-plus: #aa2323 !default;
+$color-twriter: #8ee9ff !default;
+$color-facebook: #4a90e2 !default;
+$color-brown-weight: #b9a14f !default;
+$color-button-hover: #A07D0C !default;
+$color-link-hover: #337ab7 !default;
+$color-link-hover-default: #23527c !default;
+
+// Font
+$font-family-headline: 'Open Sans', sans-serif !default;
+$font-family-text: 'Open Sans', sans-serif !default;
+$font-family-quotes: 'Noticia Text', serif;
+
+$font-size-headline: 30px !default;
+$font-size-text: 14px !default;
+
+$font-normal: 400 !default;
+$font-semibold: 600 !default;
+$font-bold: 700 !default;
+
+// Border-radius
+$border-radius-base: 4px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 3px !default;
+
+// Animation
+$base-animation-duration: 0.5s !default;
+$fast-animation-duration: 0.2s !default;
+$slow-animation-duration: 0.7s !default;
+
+$timing-function-1: "ease-in-out" !default;
+$timing-function-2: ease !default;
+
+// Z-index
+$zindex-navbar: 1000 !default;
+
+// Breakpoints
+$desktop: "(max-width: 1200px)" !default;
+$tablet: "(max-width: 992px)" !default;
+$phone: "(max-width: 768px)" !default;
+$smallphone: "(max-width: 480px)" !default;
+$extra-smallphone: "(max-width: 350px)" !default;
